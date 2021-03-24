@@ -1,0 +1,46 @@
+
+.header{
+
+color: #A4A400 ;
+background-color: #F0F0F0 ;
+font-family: Lucida,"Sans Unicode", Helvetica, Arial,sans-serif;
+font-size:  22pt;
+text-align: center;
+font-weight: bold;
+text-decoration: underline;
+font-style: italic;
+}
+.header-sub{
+    color: #A4A400 ;
+    background-color: #F0F0F0 ;
+    font-family: Lucida,"Sans Unicode", Helvetica, Arial,sans-serif;
+    font-size:  18pt;
+    text-align: left;
+    font-weight: bold;
+    text-decoration: underline;
+    font-style: italic;
+    }
+.text{
+
+        color: #404040 ;
+        background-color: white ;
+        font-family: Georgia, Garamond, sans-serif;
+        font-size:  11pt;
+        text-align: left;
+        }
+
+a{
+    color:#A4A400;
+}
+ol {
+	
+	font-weight: bold;
+}
+li span { font-weight: normal; }
+p {
+    background-color: yellow ;
+    text-align: left;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 10px;
+}
