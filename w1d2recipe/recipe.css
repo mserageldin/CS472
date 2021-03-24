@@ -28,7 +28,15 @@ font-style: italic;
         font-size:  11pt;
         text-align: left;
         }
+.footer{
 
+            color: #404040 ;
+            background-color: white ;
+            font-family: sans-serif;
+            font-size:  11pt;
+            text-align: right; /* For Edge */
+            text-align-last: left;
+            }
 a{
     color:#A4A400;
 }
@@ -43,4 +51,9 @@ p {
     margin-left: 70px;
     margin-right: 70px;
     margin-bottom: 10px;
+}
+span.strik{
+
+text-decoration: line-through;
+
 }
