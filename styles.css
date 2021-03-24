@@ -1,0 +1,45 @@
+.head{
+    font-family: Arial Black;
+       font-size:30px;
+       color:#9CC1D5 ;
+   }
+   .sub-head{
+   font-family: Arial Black;
+       font-size:15px;
+       color:#9CC1D5 ;
+   }
+   .text{
+   
+       font-size:15px;
+       color:white;
+   }
+   .body{
+   
+       background-color: #D1A468;
+   }
+   .solid {
+     border-top: 3px solid #bbb;
+   }
+   .flex-container {
+     display: flex;
+   
+   }
+   .flex-container > div {
+     /*background-color: #DodgerBlue;*/
+     margin: 10px;
+     padding: 20px;
+     font-size: 30px;
+     align-items: center;
+   }
+   .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+     /* margin: 8px;
+    ;*/
+     align-items: center;
+   
+   }
+   .check-section {
+     padding: 50px;
+     text-align: right;
+     color: white;
+   }
