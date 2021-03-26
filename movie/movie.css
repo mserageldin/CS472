@@ -1,0 +1,101 @@
+.header {
+    
+    text-align: center;
+    height: 50px;
+    background-image: url(img/bannerbg.png);
+    alt: "Rancid Tomatoes";
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+   
+  }
+  /* The navbar container */
+.topnav {
+  overflow: hidden;
+  text-align: center;
+  font-size: 24pt;
+  font-weight: bold;
+  font-family: Tahoma, Verdana,sans-serif;
+  text-shadow: 3px 3px #999999;
+ /* background-color: #333;*/
+}
+body{
+
+    background-image: url(img/background.png);
+    font-size: 8pt;
+    font-family: Verdana, Tahoma,sans-serif;
+    text-align: right;;
+}
+.item1 { grid-area: header; background-image:url(img/rbg.png);background-repeat: repeat-x;font-size:48pt;font-weight: bold ;color:red; }
+.item2 { grid-area: menu ; background-color: #A2B964;}
+.item3 { grid-area: main; }
+.item4 { grid-area: right ; }
+.item5 { grid-area: footer; background-color:#A2B964;  }
+
+.text{
+
+    font-size:8pt;
+    float:inline-end ;
+}
+.mainDiv{
+  margin-left: auto;margin-right: auto;display:block;width:60%;
+}
+.textMenu{
+
+  font-size:8pt;
+ /* display: inline-block;
+  font-weight: bold;
+  font-family:Arial, sans-serif;
+  overflow-x: hidden;*/
+  
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  
+  
+}
+.textfooter
+{
+ text-align:center;
+ font-size:10pt;
+}
+.break {
+  clear: left;
+}
+
+.quoteBox{
+    background-color: #E8DC9B;
+    border-color: gray;
+    border-width: 2px;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10pt;
+}
+.reviewer{
+
+    font-style: italic;
+    margin: 10pt;
+}
+.grid-container {
+    display: grid;
+    grid-template-areas:
+      'header  header header header menu'
+      'main  main right right menu'
+      'footer  footer footer footer footer';
+    border-style: solid;
+    border-color: gray;
+    border-width: 4px;
+    border-radius: 20px;
+   /* align-items: stretch;
+    
+  height: 60vh;*/
+    padding: 3px;
+  }
+  
+  .grid-container > div {
+   
+    text-align: left;
+    /*padding: 20px 0;*/
+    font-size: 30px;
+    align-content: left;
+    display: inline;
+  }
