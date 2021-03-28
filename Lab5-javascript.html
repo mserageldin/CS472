@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <head>
+        <title>Lab 5-JavaScript</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <script>
+            function maxNumber(x, y) {
+                if (x > y) {
+                    alert(x);
+                    return x;
+                } else {
+                    alert(y);
+                    return y;
+                }
+
+            }
+            function maxOfThree(x, y, z) {
+                var larg = x > y ? x : y;
+                var largest = larg > z ? larg : z;
+                alert(largest);
+                return largest;
+
+
+            }
+            function isVowel(x) {
+                let z = parseInt(x);
+                var num;
+                num = z > 0 ? true : false;
+                console.log(typeof z);
+                if (x.length === 1 && num === false) {
+                    alert("Is Vowl");
+                }
+                else {
+                    alert("Not Vowl");
+                }
+            }
+            function sum(a) {
+
+                var sum = 0;
+                for (let i = 0; i < a.length; i++) {
+                    sum += a[i];
+                }
+                alert(sum);
+
+            }
+            function multiply(a) {
+
+                let sum = 1;
+                for (let i = 0; i < a.length; i++) {
+                    sum *= a[i];
+                }
+                alert(sum);
+
+            }
+            function reverse(a) {
+                alert(a.split('').reverse().join(''));
+            }
+            function findLongestWord(a) {
+                var arr = a.split(' ');
+                var longest = a[0];
+                for (const c of arr) {
+                    longest = longest.length > c.length ? longest : c;
+                }
+                alert(longest);
+            }
+            function filterLongWords(a, x) {
+                var arr = a.split(' ');
+                const c = arr.filter(function (elem, i, array) {
+                    return elem.length > x;
+                });
+                alert(c);
+            }
+            function computeSumOfSquares(arr) {
+                const square = function (number) { return number * number };
+                // const factorial =function fac(n){returnn <2?1:square(n) +fac(n -1)};
+                const f = arr.reduce(function (prevVal, elem, i, array) { return prevVal + square(elem); });
+                alert(f);
+            }
+            function printOddNumbersOnly(arr) {
+
+                const c = arr.filter(function (elem, i, array) {
+                    return elem % 2 != 0;
+                });
+                alert(c);
+            }
+            function computeSumOfSquaresOfEvensOnly(arr) {
+                const c = arr.filter(function (elem, i, array) {
+                    return elem % 2 == 0;
+                });
+                console.log(c);
+                const square = function (number) { return number * number };
+                const f = c.reduce(function (prevVal, elem, i, array) { return square(prevVal) + square(elem); });
+                alert(f);
+
+            }
+            function sumNew(arr) {
+                const f = arr.reduce(function (prevVal, elem, i, array) { return prevVal + elem; });
+                alert(f);
+            }
+            function multilyNew(arr) {
+                const f = arr.reduce(function (prevVal, elem, i, array) { return prevVal * elem; });
+                alert(f);
+            }
+            function findSecondBiggest(arr) {
+                var big = arr[0] > arr[1] ? arr[0] : arr[1];
+                var secBig = arr[0] > arr[1] ? arr[1] : arr[0];
+                for (let i = 2; i < arr.length; i++) {
+                    if (big < arr[i]) {
+                        console.log();
+                        // secBig=big;
+                        big = arr[i];
+                    } else if (secBig < arr[i]) {
+                        secBig = arr[i];
+                    }
+                }
+
+
+                alert(secBig);
+            }
+
+            function printFibo(num, a, b) {
+                alert(fib(num, a, b));
+
+            }
+            function fib(n, a, b) {
+                let arr = [a, b];
+                for (let i = 2; i < n; i++) {
+                    arr.push(arr[i - 2] + arr[i - 1])
+                }
+                return arr;
+            }
+
+            function fibonacci(a, b, num) {
+                var a = 1, b = 0, temp;
+
+                while (num >= 0) {
+                    temp = a;
+                    a = a + b;
+                    b = temp;
+                    num--;
+                }
+
+                return b;
+            }
+        </script>
+    </head>
+
+</head>
+
+<body>
+    <form>
+        <div class="container">
+
+            <ol>
+                <li> Max Function <input type="button" onclick="maxNumber(150,190);" value="max of 150 or 190?" /> max
+                    of 150 or 190? </li>
+                <li> Max Function of Three Numbers <input type="button" onclick="maxOfThree(150,190,250);"
+                        value="max of 150 or 190 or 250?" /> max of 150 or 190 or 250? </li>
+                <li> Is Vowel Function <input type="button" onclick="isVowel('3');" value="is 3 vowel?" /> is 3 vowel?
+                </li>
+                <li> Sum Function <input type="button" onclick="sum([1,2,3,4]);" value="sum of [1,2,3,4]?" /> sum of
+                    [1,2,3,4]? </li>
+                <li> Multiply Function <input type="button" onclick="multiply([1,2,3,4]);"
+                        value="Multiply of [1,2,3,4]?" /> Multiply of [1,2,3,4]? </li>
+                <li> Reverse Function <input type="button" onclick="reverse('jag testar') ;"
+                        value="reverse of jag testar?" /> reverse of jag testar? </li>
+                <li> findLongestWord Function <input type="button"
+                        onclick="findLongestWord('that takes an array of words and returns the length of the longest one') ;"
+                        value="findLongestWord of that takes an array of words and returns the length of the longest one?" />
+                    findLongestWord of jag testar? </li>
+                <li> filterLongWords Function <input type="button"
+                        onclick="filterLongWords('that takes an array of words and returns the length of the longest one',5) ;"
+                        value="filterLongWords of that takes an array of words and returns the length of the longest one- that greater than 5 characters?" />
+                    findLongestWord of jag testar? </li>
+                <li> computeSumOfSquares Function <input type="button" onclick="computeSumOfSquares([1,2,3]);"
+                        value="computeSumOfSquares of [1,2,3]?"> computeSumOfSquares of [1,2,3]? </li>
+                <li> printOddNumbersOnly Function <input type="button" onclick="printOddNumbersOnly([1,2,3]);"
+                        value="printOddNumbersOnly of [1,2,3]?"> printOddNumbersOnly of [1,2,3]? </li>
+                <li> computeSumOfSquaresOfEvensOnly Function <input type="button"
+                        onclick="computeSumOfSquaresOfEvensOnly([1,2,3,4,5]) ;"
+                        value="computeSumOfSquaresOfEvensOnly of [1,2,3,4,5]?"> computeSumOfSquaresOfEvensOnly of
+                    [1,2,3,4,5]? </li>
+                <li> Sum Function using reduce <input type="button" onclick="sumNew([1,2,3,4]);"
+                        value="sum of [1,2,3,4]?" /> sum of [1,2,3,4]? </li>
+                <li> Multiply Function using reduce<input type="button" onclick="multilyNew([1,2,3,4]);"
+                        value="Multiply of [1,2,3,4]?" /> Multiply of [1,2,3,4]? </li>
+                <li> findSecondBiggest Function<input type="button" onclick="findSecondBiggest([19,9,11,0,12]) ;"
+                        value="findSecondBiggest of [1,2,3,4]?" /> findSecondBiggest of [19,9,11,0,12]? </li>
+                <li> printFibo Function<input type="button" onclick="printFibo(6,0,1);"
+                        value="printFibo of (n=6, a=0, b=1)?" /> printFibo of of (n=6, a=0, b=1) </li>
+                <li> printFibo Function<input type="button" onclick="printFibo(10,0,1);"
+                        value="printFibo of (n=10, a=0, b=1)?" /> printFibo of (n=10, a=0, b=1)? </li>
+
+            </ol>
+        </div>
+    </form>
+
+</body>
+
+</html>

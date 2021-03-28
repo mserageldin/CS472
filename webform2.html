@@ -1,100 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Lab 4-Web Form Two</title>
-<style>
-.navbar-brand2 {
-  color: white;
-  display: inline-block;
-    padding-top: .3125rem;
-    padding-bottom: .3125rem;
-    margin-right: 1rem;
-    font-size: 1.25rem;
-    line-height: inherit;
-    white-space: nowrap;
-}
-.navbar-nav > li > a::before {
-    content: "|";
-    padding: 0 5px
-}
-</style>
+  <style>
+    .navbar-brand2 {
+      color: white;
+      display: inline-block;
+      padding-top: .3125rem;
+      padding-bottom: .3125rem;
+      margin-right: 1rem;
+      font-size: 1.25rem;
+      line-height: inherit;
+      white-space: nowrap;
+    }
+
+    .navbar-nav>li>a::before {
+      content: "|";
+      padding: 0 5px
+    }
+  </style>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light  bg-info text-white">
-        <a class="navbar-brand2" href="#">MUM Golden Dom Market:::SRM System</a>
-      
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-               <span class="sr-only">(current)</span>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand2" href="#">Products</a>
-            </li>
-            <li class="nav-item">
-                <a class="navbar-brand2" href="#">Suppliers</a>
-              </li>
-            
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <a class="navbar-brand2" href="#">Hello!</a>
-            <button class="btn btn-secondary btn-lg " type="submit">Sign out</button>
-          </form>
-        </div>
-      </nav>
-    
+  <nav class="navbar navbar-expand-lg navbar-light  bg-info text-white">
+    <a class="navbar-brand2" href="#">MUM Golden Dom Market:::SRM System</a>
 
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <span class="sr-only">(current)</span>
+        </li>
+        <li class="nav-item">
+          <a class="navbar-brand2" href="#">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="navbar-brand2" href="#">Suppliers</a>
+        </li>
 
-
-  <div class="container">
-      <br/>
-    <h3>New Product Form</h3>
-    <div class="row">
-      <div class="col">
-        <label for="exampleInputEmail1">Product Number</label>
-                <input type="text" class="form-control"/>
-                <label for="exampleInputEmail1">Name</label>
-                <input type="text" class="form-control"/>
-                <label for="exampleInputEmail1">Unit Price</label>
-                <input type="text" class="form-control" value="0.0"/>
-      </div>
-      <div class="col">
-        <label for="exampleInputEmail1">Quantity in the stock</label>
-        <input type="text" class="form-control" value="0"/>
-        <label for="exampleInputEmail1">Supplier:</label><br/>
-        <div class="dropdown ">
-            <button class="btn btn-secondary dropdown-toggle bg-primary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Select Supplier
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </div>
-        
-        <label for="exampleInputEmail1">Date Supplied</label>
-        <input type="text" class="form-control" value="mm/dd/yyyy"/>
-        <small id="dateHelp" class="form-text text-muted">Enter a valid Date.</small>
-      </div>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <a class="navbar-brand2" href="#">Hello!</a>
+        <button class="btn btn-secondary btn-lg " type="submit">Sign out</button>
+      </form>
     </div>
-    <div class="row">
+  </nav>
+
+  <form
+    onsubmit="alert('The User Input the following values,Product Number:'+ document.getElementById('txtProdnum').value+ ',Name:'+ document.getElementById('txtName').value+',Unit Price:'+document.getElementById('txtPrice').value+',Quantity:'+document.getElementById('txtQun').value+',Supplier:'+document.getElementById('supplier').value+',Date Supplied:'+document.getElementById('txtDate').value);return false;">
+
+
+
+    <div class="container">
+      <br />
+      <h3>New Product Form</h3>
+      <div class="row">
         <div class="col">
+          <label for="exampleInputEmail1">Product Number</label>
+          <input type="text" class="form-control" id="txtProdnum" />
+          <label for="exampleInputEmail1">Name</label>
+          <input type="text" class="form-control" id="txtName" />
+          <label for="exampleInputEmail1">Unit Price</label>
+          <input type="text" class="form-control" value="0.0" id="txtPrice" />
+        </div>
+        <div class="col">
+          <label for="exampleInputEmail1">Quantity in the stock</label>
+          <input type="text" class="form-control" value="0" id="txtQun" />
+          <label for="exampleInputEmail1">Supplier:</label><br />
+          <select id="supplier">
+            <option class="dropdown-item" >Supplier one</option>
+            <option class="dropdown-item" >Supplier Two</option>
+            <option class="dropdown-item" >Supplier Three</option>
+          </select><br/>
+          <label for="exampleInputEmail1">Date Supplied</label>
+          <input type="text" class="form-control" value="mm/dd/yyyy" type="date" id="txtDate" />
+          <small id="dateHelp" class="form-text text-muted">Enter a valid Date.</small>
+          </div>
+
          
         </div>
+      </div>
+      <div class="row">
         <div class="col">
-            <br/>
-            <button type="button" class="btn btn-outline-primary" >Reset</button>
-            <button type="button" class="btn btn-outline-warning">Cancel</button>
-            <button type="button" class="btn btn-outline-info">Add part</button>
+
+        </div>
+        <div class="col">
+          <br />
+          <button type="reset" class="btn btn-outline-primary">Reset</button>
+          <button type="button" class="btn btn-outline-warning">Cancel</button>
+          <button type="submit" class="btn btn-outline-info">Add part</button>
         </div>
       </div>
-  </div>
+    </div>
+  </form>
 </body>
+
 </html>

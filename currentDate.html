@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Lab 5 -Question 15</title>
+<script type="text/javascript"> 
+function display_c(){
+var refresh=1000; // Refresh rate in milli seconds
+mytime=setTimeout('display_ct()',refresh)
+}
+
+function display_ct() {
+var x = new Date()
+document.getElementById('ct').innerHTML = x;
+display_c();
+ }
+</script>
+</head>
+
+<body onload=display_ct(); style=" text-align: center; position: relative;">
+<p>
+ <h1><span id='ct' ></span></h1>   
+</p>
+
+</body>
+</html>
