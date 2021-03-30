@@ -1,5 +1,5 @@
 document.addEventListener('readystatechange', event => { 
-
+"use strict";
     
     if (event.target.readyState === "complete") {
         const  btnb = document.getElementById('buttonB');
