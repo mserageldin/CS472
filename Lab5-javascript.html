@@ -86,10 +86,11 @@
                 alert(c);
             }
             function computeSumOfSquares(arr) {
-                const square = function (number) { return number * number };
+                //const square = function (number) { return number * number };
                 // const factorial =function fac(n){returnn <2?1:square(n) +fac(n -1)};
-                const f = arr.reduce(function (prevVal, elem, i, array) { return prevVal + square(elem); });
-                alert(f);
+                const v=arr.map(s=>s*s).reduce((acc,seq)=> acc+seq);
+               // const f = arr.reduce(function (prevVal, elem, i, array) { return prevVal + square(elem); });
+                alert(v);
             }
             function printOddNumbersOnly(arr) {
 
@@ -105,16 +106,19 @@
                 console.log(c);
                 const square = function (number) { return number * number };
                 const f = c.reduce(function (prevVal, elem, i, array) { return square(prevVal) + square(elem); });
-                alert(f);
-
+                
+                //or 
+                const v=c.filter(x=> x%2==0).map(x=>x*x).reduce((acc,seq)=>acc+seq);
+                alert(v);
             }
-            function sumNew(arr) {
-                const f = arr.reduce(function (prevVal, elem, i, array) { return prevVal + elem; });
-                alert(f);
-            }
+           // function sumNew(arr) {
+           //     const f = arr.reduce(function (prevVal, elem, i, array) { return prevVal + elem; });
+          //      alert(f);
+          //  }
             function multilyNew(arr) {
-                const f = arr.reduce(function (prevVal, elem, i, array) { return prevVal * elem; });
-                alert(f);
+                const v= arr.map(s=> s*s).reduce((acc,seq)=> acc+seq );
+               // const f = arr.reduce(function (prevVal, elem, i, array) { return prevVal * elem; });
+                alert(v);
             }
             function findSecondBiggest(arr) {
                 var big = arr[0] > arr[1] ? arr[0] : arr[1];
@@ -195,8 +199,8 @@
                         onclick="computeSumOfSquaresOfEvensOnly([1,2,3,4,5]) ;"
                         value="computeSumOfSquaresOfEvensOnly of [1,2,3,4,5]?"> computeSumOfSquaresOfEvensOnly of
                     [1,2,3,4,5]? </li>
-                <li> Sum Function using reduce <input type="button" onclick="sumNew([1,2,3,4]);"
-                        value="sum of [1,2,3,4]?" /> sum of [1,2,3,4]? </li>
+              <!--  <li> Sum Function using reduce <input type="button" onclick="sumNew([1,2,3,4]);"
+                        value="sum of [1,2,3,4]?" /> sum of [1,2,3,4]? </li>  -->
                 <li> Multiply Function using reduce<input type="button" onclick="multilyNew([1,2,3,4]);"
                         value="Multiply of [1,2,3,4]?" /> Multiply of [1,2,3,4]? </li>
                 <li> findSecondBiggest Function<input type="button" onclick="findSecondBiggest([19,9,11,0,12]) ;"
