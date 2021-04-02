@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Patients</title>
+  <meta charset="ujavascript:void(0);tf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script defer src="./patients.js"></script>
+  <link rel="stylesheet" href="./patients.css" />
+
+</head>
+
+<body>
+
+  <nav class="navbar ">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand a" href="#">CS472:::HolyCross Hospital</a>
+        <a class="navbar-brand a" href="./bless_home.html">Home</a>
+        <a class="navbar-brand a" href="./Patients.html">Patients</a>
+      </div>
+      <div class="collapse navbar-collapse a" id="myNavbar">
+
+        <ul class="nav navbar-nav navbar-right a">
+          <li><a href="#" class="a"><span class="glyphicon glyphicon-user"></span> Welcome Guest!</a></li>
+
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+  <form id="myform">
+    <div class="container text-left">
+      <h3>Patients Registration</h3><br>
+      <div class="form-group">
+        <label for="exampleInputEmail1">*Patient ID Number</label>
+        <!--01-XXX-XXXX-->
+        <input type="text" class="form-control" id="txtAccnum" required pattern="^EP-([0-9]{3}-)[0-9]{5}$"
+          title="Enter ID number in following format EP-XXX-XXXXX" value="EP-XXX-XXXXX" />
+        <small id="emailHelp" class="form-text text-muted">Enter the patient ID Number in the specified format.</small>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label for="exampleWebsite">*First Name</label>
+            <input type="text" class="form-control" id="txtFn" title="Kindly enter FirstName" required
+              value="Enter FirstName" />
+            <small id="emailHelp" class="form-text text-muted">Kindly enter Firs tName</small>
+          </div>
+        </div>
+        <div class="col-sm-4">
+
+          <div class="form-group">
+            <label for="exampleWebsite">Middle initial</label>
+            <input type="text" class="form-control" id="txtMn" title="Kindly enter Middle initial"
+              value="Enter Middle initial" />
+            <small id="emailHelp" class="form-text text-muted">Kindly enter Middle initial</small>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label for="exampleWebsite">*Last Name</label>
+            <input type="text" class="form-control" id="txtLn" title="Kindly enter Last Name" required
+              value="Enter Last Name" />
+            <small id="emailHelp" class="form-text text-muted">Kindly enter Last Name</small>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label for="exampleWebsite">*Date of Birth </label>
+            <input type="text" class="form-control" id="txtDate" title="Kindly enter Date of Birth" required
+              value="mm/dd/yyyy" />
+            <small id="emailHelp" class="form-text text-muted">Kindly enter Date of Birth</small>
+          </div>
+        </div>
+        <div class="col-sm-4">
+
+          <div class="form-group">
+            <div class="dropdown">
+              <label for="exampleInputEmail1">*Department</label><br />
+              <select class="btn btn-default dropdown-toggle form-control" id="ddlDepart" required>
+                <optgroup class="dropdown-header" label="Select....">
+                  <option class="dropdown-item">Cardiology</option>
+                  <option class="dropdown-item">Ear,Nose& throat</option>
+                  <option class="dropdown-item">Primary Care</option>
+                </optgroup>
+              </select>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label for="exampleInputEmail1">*Is this an out-patient:</label><br />
+            <fieldset id="group1">
+              <input type="radio" id="Y" name="radio" value="Yes" required>
+              <label for="male">Yes</label>
+              <input type="radio" id="N" name="radio" value="No" required>
+              <label for="female">NO</label>
+            </fieldset>
+          </div>
+          <button type="reset" class="btn navbar btn-default " id="btn" >Reset</button>
+          <button type="submit" class="btn btn-primary navbar" id="btnCreate"  form="myform" value="submit">Register Patient</button>
+        </div>
+      </div>
+      <div class="container text-left">
+        <div>
+          <fieldset id="group1">
+            <input type="checkbox" name="newsletter" id="check">
+            <label for="check_1">Show Elderly Patients Only</label>
+            <input type="checkbox" name="newsletter" id="check_1">
+            <label for="check_1">Show Out Patients Only</label>
+          </fieldset>
+        </div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Patient ID No</th>
+              <th>First Name</th>
+              <th>Middle initial</th>
+              <th>Last Name</th>
+              <th>Date of birth</th>
+              <th>Department</th>
+              <th>Out-Patient?</th>
+            </tr>
+          </thead>
+          <tbody>
+           
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </form>
+  <footer class="container-fluid ">
+    <p>CS472:::HolyCross Hospital <span class="navbar-right">HCMC &copy; Hospital April 2021</span></p>
+
+  </footer>
+
+</body>
+
+</html>
