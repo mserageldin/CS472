@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body>
+    <table>
+        <th>Week</th>
+        <th>Session</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>wednesday</th>
+        <th>thursday</th>
+        <th>Friday</th>
+        <th>Saterday</th>
+        <tr>
+            <td rowspan="4">Week1</td>
+            <td></td>
+            <td colspan="6">Theme I:Html& CSsTheme I:Html& CSs</td>
+            
+    
+        </tr>
+        <tr>
+            
+            <td>am</td>
+            <td>HTNL</td>
+            <td>CSS</td>
+            <td>JS</td>
+            <td>sdsd</td>
+            <td>ddsd</td>
+            <td>sds</td>
+        </tr>
+        <tr>
+           
+            <td>Pm</td>
+            <td>lab</td>
+            <td>lab</td>
+            <td>lab</td>
+            <td>lab</td>
+            <td>lab</td>
+            <td>lab</td>
+        </tr>
+        <tr>
+           
+            <td>Eve</td>
+            <td>HW</td>
+            <td>HW</td>
+            <td>HW</td>
+            <td>HW</td>
+            <td>HW</td>
+            <td>-</td>
+        </tr>
+    </table>
+   <Code>1-
+   Undefined
+   8
+   8
+   10
+   10
+   1
+   2-
+   Global Scope: the environment scope available to java variables and functions.
+   Local Scope: the function scope to its own local variables 
+   3-
+   a-No, global scope can’t access local scope due to closure
+   b-yes
+   c-no
+   d-yes
+   e-yes
+   4-
+   81
+   25
+   5-
+   1
+   6-
+   const count=(
+       function () {
+   
+           let counter =0;
+           const getCounter=function () {
+               return counter;
+           }
+           const add=function () {
+               counter+=1;
+               
+           }
+           const reset=function () {
+               counter=0;
+           }
+           return{
+               getCounter:getCounter,
+               add:add,
+               reset:reset
+   
+           }
+   
+           
+   })();
+   
+   7-the free variable are: counter
+   The free variable is a variable referred to by a function and it’s not one of its parameters or variables 
+   8-
+   
+   const make_adder = (n) => {
+       let count = 0;
+       return () => {
+           count+=n;
+         console.log(count);
+       };
+     };
+   const add5=make_adder(5);
+   const add6=make_adder(6);
+   const add7=make_adder(7);
+   add5();
+   add5();
+   add6();
+   add7();
+   9-by declare and immediately calls an anonymous function (IIMF)(make it module or anonymous function)
+   10- const Employee = (function () {
+       let name = "";
+       let age = 0;
+       let salary = 0;
+       //public 
+       function setname(newName) {
+           name = newName;
+   
+       }
+       function setAge(newAge) {
+           age = newAge;
+   
+       }
+       function setSalary(newSalary) {
+           salary = newSalary;
+   
+       }
+       //private
+       function getSalary() {
+           return salary;
+   
+       }
+       function getAge() {
+           return age;
+   
+       }
+       function getName() {
+           return name;
+   
+       }
+       //public
+       function increaseSalary(percentage) {
+   
+           salary += salary * percentage;
+       }
+       function incrementAge() {
+   
+           return getAge();
+       }
+   
+       return {
+           setname: function (newName) {
+               setname(newName);
+           },
+           setAge: function (newAge) {
+               setAge(newAge);
+           },
+           setSalary: function (newSal) {
+               setSalary(newSal);
+           },
+           increaseSalary: function (perc) {
+               increaseSalary(perc);
+           },
+           incrementAge: function () {
+               return getAge();
+           }
+       }
+   
+   
+   })();
+   
+   Employee.setname("Mohamed Serag");
+   Employee.setAge(36);
+   Employee.setSalary(100000);
+   console.log(Employee.incrementAge());
+   
+   11-
+   Employee.extension = function () {
+       let addrss = "";
+       function setAddress(newAdd) {
+           addrss = newAdd;
+       }
+       function getAddress() {
+           return addrss;
+       }
+       return {
+         
+           
+           setAddress: function (newaddr) {
+               setAddress(newaddr);
+           },
+           getAddress: function () {
+               return getAddress();
+           }
+       }
+   };
+   Employee.setname("Mohamed Serag");
+   Employee.setAge(36);
+   Employee.setSalary(100000);
+   console.log(Employee.incrementAge());
+   Employee.setAddress("Sweet Alexandria");
+   console.log(Employee.getAddress());
+   
+   >
+</Code>
+</body>
+</html>

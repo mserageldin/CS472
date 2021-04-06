@@ -91,12 +91,20 @@ const make_adder = (n) => {
         console.log(count);
     };
 };
+const make_adder2 = function(x){
+    let count=0;
+    return function(){
+        count+=x;
+        console.log(count);
+        return function(){ return count;}
+    }
+};
 const add5 = make_adder(5);
-const add6 = make_adder(6);
+const add6 = make_adder2(6);
 const add7 = make_adder(7);
+add5();
 //add5();
-//add5();
-//add6();
+add6();
 // add7();
 
 const Employee = (function () {
@@ -162,15 +170,17 @@ const Employee = (function () {
 })();
 
 
-
-Employee.extension = function () {
-    let addrss = "";
-    function setAddress(newAdd) {
-        addrss = newAdd;
-    }
-    function getAddress() {
-        return addrss;
-    }
+Employee.addrss="test add";
+Employee.setAddress = function (newAdd) {
+    
+    
+        this.addrss = newAdd;
+        
+    };
+Employee.getAddress =
+     function() {
+        return this.addrss;
+    };/*
     return {
       
         
@@ -180,8 +190,8 @@ Employee.extension = function () {
         getAddress: function () {
             return getAddress();
         }
-    }
-};
+    }*/
+//};
 Employee.setname("Mohamed Serag");
 Employee.setAge(36);
 Employee.setSalary(100000);

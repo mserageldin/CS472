@@ -33,6 +33,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+    <script src="./webform2.js" defer></script>
 </head>
 
 <body>
@@ -59,8 +60,7 @@
     </div>
   </nav>
 
-  <form
-    onsubmit="alert('The User Input the following values,Product Number:'+ document.getElementById('txtProdnum').value+ ',Name:'+ document.getElementById('txtName').value+',Unit Price:'+document.getElementById('txtPrice').value+',Quantity:'+document.getElementById('txtQun').value+',Supplier:'+document.getElementById('supplier').value+',Date Supplied:'+document.getElementById('txtDate').value);return false;">
+  <form id="target">
 
 
 
@@ -86,7 +86,7 @@
             <option class="dropdown-item" >Supplier Three</option>
           </select><br/>
           <label for="exampleInputEmail1">Date Supplied</label>
-          <input type="text" class="form-control" value="mm/dd/yyyy" type="date" id="txtDate" />
+          <input type="date" class="form-control" value="mm/dd/yyyy" type="date" id="txtDate" />
           <small id="dateHelp" class="form-text text-muted">Enter a valid Date.</small>
           </div>
 
@@ -103,6 +103,10 @@
           <button type="button" class="btn btn-outline-warning">Cancel</button>
           <button type="submit" class="btn btn-outline-info">Add part</button>
         </div>
+        
+      </div>
+      <div class="alert alert-success" role="alert" id="result">
+        
       </div>
     </div>
   </form>
