@@ -1,4 +1,4 @@
-import {Person,Employee} from './js/js/Person.js';
+import {Person,Employee} from './js/Person.js';
 
 let persons = [
     new Person('Ana Smith',new Date(1998,11,15)),
