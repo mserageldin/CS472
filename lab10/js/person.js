@@ -29,7 +29,7 @@ export class Employee extends Person {
     }
      doJob(jobTitle) {
         const formattedSalary=new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(this.Salary);
-        console.log(`{${this.name} is a ${jobTitle} who earns ${formattedSalary} `);
+        console.log(`{${super.name} is a ${jobTitle} who earns ${formattedSalary} `);
     };
 
 };
