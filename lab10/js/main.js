@@ -9,6 +9,8 @@ let persons = [
 
 for (const key of persons) {
     key.toString;
+   // key._name="";
+   // console.log(key._name);
      
 }
 //Jim Hanson, set their salary to $245.990.00 

@@ -1,27 +1,27 @@
-class Person {
+export class Person {
     constructor(name, dateOfBirth) {
-        this.name = name;
-        this.dateOfBirth = dateOfBirth;
+        this._name = name;
+        this._dateOfBirth = dateOfBirth;
     }
-    get getname() {
-        return this.name;
+    get name() {
+        return this._name;
     }
-    set setName(newName) {
-        this.name = newName;
+    set name(newName) {
+        this._name = newName;
     };
-    get getDateOfBirth() {
-        return this.dateOfBirth;
+    get dateOfBirth() {
+        return this._dateOfBirth;
     };
-    set setDateOfBirth(newDate) {
-        this.dateOfBirth = newDate;
+    set dateOfBirth(newDate) {
+        this._dateOfBirth = newDate;
     };
     get toString() {
         var mon = parseInt(this.dateOfBirth.getMonth()) + 1;
-        console.log(`{Name:${this.getname} ,DateOfBirth: ${this.dateOfBirth.getFullYear()}-${mon}-${this.dateOfBirth.getDate()} }`);
+        console.log(`{Name:${this.name} ,DateOfBirth: ${this.dateOfBirth.getFullYear()}-${mon}-${this.dateOfBirth.getDate()} }`);
     };
 }
 
-class Employee extends Person {
+export class Employee extends Person {
     constructor(name, dateOfBirth,Salary,hireDate) {
         super(name, dateOfBirth);
         this.Salary = Salary;
@@ -29,8 +29,8 @@ class Employee extends Person {
     }
      doJob(jobTitle) {
         const formattedSalary=new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(this.Salary);
-        console.log(`{${this.getname} is a ${jobTitle} who earns ${formattedSalary} `);
+        console.log(`{${this.name} is a ${jobTitle} who earns ${formattedSalary} `);
     };
 
 };
-export {Person,Employee} ;
+//export {Person,Employee} ;
