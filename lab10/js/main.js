@@ -16,3 +16,4 @@ for (const key of persons) {
 //Jim Hanson, set their salary to $245.990.00 
 const emp=new Employee('Jim Hanson','',parseFloat(245990.00),'Software Engineer');
 emp.doJob('Software Engineer');
+console.log($('<div>'));
